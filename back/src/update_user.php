@@ -1,5 +1,6 @@
 <?php
 include("../config/connectionDB.php");
+$userId = $_POST['uId'];
 $fname = $_POST['f_name'];
 $lname = $_POST['l_name'];
 $idnum = $_POST['id_num'];
@@ -15,7 +16,9 @@ $sql = "UPDATE users SET
         celphone = '$cel_phone',
         email = '$email'
         WHERE
-        number_id = '$idnum'";
+        number_id = '$idnum'
+        id = '$userId'";
+        
 
         if ($conn->query($sql)===TRUE){
             echo "<script> alert('El usuario ha sido actualizado')</script>";

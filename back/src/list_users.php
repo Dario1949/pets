@@ -41,7 +41,7 @@
                     <tr>";
                 }
             }else{
-                echo"No data fond";
+                echo"Datos no encontrados";
             }
         ?>
 
